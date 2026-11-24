@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel Tic Tac Toe 🎀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HOME SCREEN -->
+        <section id="homeScreen" class="screen">
+
+            <div class="decoration">✿ ♡ ✧</div>
+
+            <h1>Tick Tack Toe</h1>
+            <p class="subtitle">A little game, a lot of fun!</p>
+
+            <div class="cute-icon">🎀</div>
+
+            <h2>Choose Your Opponent</h2>
+
+            <div class="mode-container">
+
+                <button class="mode-card" onclick="startGame('friend')">
+                    <span>👯</span>
+                    <h3>2 Players</h3>
+                    <p>Play with a friend</p>
+                </button>
+
+                <button class="mode-card" onclick="showRobotOptions()">
+                    <span>🤖</span>
+                    <h3>Vs Robot</h3>
+                    <p>Challenge the computer</p>
+                </button>
+
+            </div>
+
+            <div id="robotOptions" class="robot-options hidden">
+                <h3>Choose Difficulty</h3>
+
+                <button onclick="startGame('robot', 'easy')">
+                    🌸 Easy
+                </button>
+
+                <button onclick="startGame('robot', 'hard')">
+                    ⭐ Hard
+                </button>
+            </div>
+
+            <p class="footer">Made with ♡ and a little magic</p>
+
+        </section>
+
+
+        <!-- GAME SCREEN -->
+        <section id="gameScreen" class="screen hidden">
+
+            <button class="back-btn" onclick="goHome()">
+                ← Back to Home
+            </button>
+
+            <h1>Let's Play! 🌷</h1>
+
+            <p id="gameMode" class="subtitle">
+                Two Player Mode
+            </p>
+
+            <!-- SCOREBOARD -->
+            <div class="scoreboard">
+
+                <div class="score-card">
+                    <span>❌</span>
+                    <p>Player X</p>
+                    <h2 id="scoreX">0</h2>
+                </div>
+
+                <div class="score-card">
+                    <span>🤝</span>
+                    <p>Draws</p>
+                    <h2 id="scoreDraw">0</h2>
+                </div>
+
+                <div class="score-card">
+                    <span>⭕</span>
+                    <p id="playerOLabel">Player O</p>
+                    <h2 id="scoreO">0</h2>
+                </div>
+
+            </div>
+
+            <h2 id="status">Player X's Turn</h2>
+
+            <!-- GAME BOARD -->
+            <div class="board">
+
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+
+                <button class="cell"></button>
+                <button class="cell"></button>
+                <button class="cell"></button>
+
+            </div>
+
+            <div id="result" class="result hidden"></div>
+
+            <div class="game-buttons">
+                <button id="nextRound">Play Again ↻</button>
+                <button id="resetScores">Reset Scores</button>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
